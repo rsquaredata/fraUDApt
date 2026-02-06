@@ -1,0 +1,16 @@
+name: fraudapt
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - xgboost
+  - matplotlib
+  - seaborn
+  - imbalanced-learn
+  - jupyterlab
+  - tqdm
+  - requests
