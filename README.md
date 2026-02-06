@@ -113,13 +113,15 @@ Main steps:
   - instance re-weighting (importance weighting),
   - CORAL (Correlation Alignment),
   - combined strategies,
-- oracle evaluation on the target domain (labels used only for assessment).
+- oracle evaluation on the target domain (labels used only for assessment, never during adaptation).
 
 The focus is on preserving detection performance when labels are unavailable in the target domain.
 
 ---
 
 ## Requirements
+
+Once the environment is created and the data paths are configured, the experiments can be reproduced by running the notebooks in numerical order.
 
 The project relies on standard Python scientific libraries.
 
