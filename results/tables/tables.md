@@ -1,13 +1,12 @@
-
-# Résumé des résultats expérimentaux
+# Experimental Results Summary
 
 ---
 
-## 1. Hyper-paramètres optimisés (GridSearch)
+## 1. Optimized Hyperparameters (GridSearch)
 
-| Modèle | Hyper-paramètres optimisés |
-|------|----------------------------|
-| Régression Logistique | C = 7.7426, penalty = l2 |
+| Model | Optimized hyperparameters |
+|------|---------------------------|
+| Logistic Regression | C = 7.7426, penalty = l2 |
 | Random Forest | n_estimators = 600, max_depth = 50, min_samples_split = 2 |
 | XGBoost | learning_rate = 0.1, max_depth = 9 |
 | SVM | C = 10, kernel = linear |
@@ -15,11 +14,11 @@
 
 ---
 
-## 2. Performances comparées des modèles (jeu de test)
+## 2. Model Performance Comparison (Test Set)
 
-| Modèle | Recall | Précision | Score F1 |
+| Model | Recall | Precision | F1-score |
 |------|--------|-----------|----------|
-| Régression Logistique | 0.49 | 0.82 | 0.62 |
+| Logistic Regression | 0.49 | 0.82 | 0.62 |
 | Random Forest | 0.65 | 0.91 | 0.76 |
 | XGBoost | 0.68 | 0.91 | 0.78 |
 | SVM | 0.48 | 0.80 | 0.60 |
@@ -27,22 +26,22 @@
 
 ---
 
-## 3. Impact des stratégies de gestion du déséquilibre (XGBoost)
+## 3. Impact of Class Imbalance Strategies (XGBoost)
 
-| Approche | Recall | Précision | Score F1 |
+| Approach | Recall | Precision | F1-score |
 |--------|--------|-----------|----------|
-| Baseline (XGBoost standard) | 0.68 | 0.91 | 0.78 |
+| Baseline (standard XGBoost) | 0.68 | 0.91 | 0.78 |
 | Under-sampling | 0.88 | 0.52 | 0.66 |
 | SMOTE | 0.71 | 0.85 | 0.78 |
-| Class Weighting | 0.83 | 0.71 | 0.77 |
+| Class weighting | 0.83 | 0.71 | 0.77 |
 
 ---
 
-## 4. Résultats en adaptation de domaine (UDA)
+## 4. Domain Adaptation Results (UDA)
 
-Performances mesurées sur le **domaine cible** (évaluation Oracle).
+Performance measured on the **target domain** using an *oracle* evaluation.
 
-| Méthode | Recall (T) | Précision (T) | Score F1 (T) |
+| Method | Recall (T) | Precision (T) | F1-score (T) |
 |--------|-------------|---------------|--------------|
 | Source-only (Baseline) | 0.72 | 0.43 | 0.54 |
 | Re-weighting | 0.70 | 0.44 | 0.54 |
